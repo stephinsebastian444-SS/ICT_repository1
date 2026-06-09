@@ -2,13 +2,14 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
+import joblib
 st.set_page_config(
     page_title="Diabetes Prediction System",
     page_icon="🩺",
     layout="centered"
 )
 
-model = pickle.load(open("diabetes_model.pkl", "rb"))
+model = pickle.load("diabetes_model.joblib")
 scaler = pickle.load(open("scaler.pkl", "rb"))
 
 st.title("🩺 Diabetes Prediction System")
