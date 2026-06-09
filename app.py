@@ -9,7 +9,7 @@ st.set_page_config(
     layout="centered"
 )
 
-model = pickle.load("diabetes_model.joblib")
+model = joblib.load("diabetes_model.joblib")
 scaler = pickle.load(open("scaler.pkl", "rb"))
 
 st.title("🩺 Diabetes Prediction System")
